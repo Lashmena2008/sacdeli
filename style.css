@@ -28,21 +28,23 @@ body{
     transition: 0.5s;
 }
 
- .slide .item:nth-child(1){   
+  .slide .item:nth-child(1){    
     top: 0;
     left: 0;
     transform: translate(0, 0);
     border-radius: 20px;
     width: 100%;
-    height: 100%;}
+    height: 100dvh;}
 .text{
    width: 200px;
     height: 150px;
     word-break: break-all;
     color: white;
     backdrop-filter: blur(10px); 
-    
-  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px;
 }
  .text2{
     width: 200px;
@@ -50,7 +52,12 @@ body{
     word-break: break-all;
     color: white;
     backdrop-filter: blur(10px); 
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   border-radius: 20px;
+   gap: 20px;
+
  }
  
 
@@ -103,14 +110,78 @@ text-align: center;
 }
 .item>.text1
 {
-
+ 
 display: flex;
 flex-direction: column;
     align-items: end;
     justify-content: center;
-    height: 600px;
-}
+     height: 540px; 
+    padding-right: 25px;
+
+} 
 .item>.button{
     display: flex;
-    justify-content:center ;
+    justify-content:end;
+    align-items: end;
+    margin-right: 200px;
 }
+
+.shualedi{
+    height: 15px;
+}
+.item>.kutxe{
+    display: flex;
+    justify-content: center;
+    width:200px;
+    height: 60px; 
+    border-radius: 50px;
+    background-color: #505050;
+    margin-left: 1100px;
+}
+ 
+.btn>div{
+    width: 200px;
+    height:60px ;
+box-shadow: 10px 14px 20px black;
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+}
+.btn>div::before{
+    content: "";
+    background-image: conic-gradient(#ff0000 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+.btn>div::after{
+    content: "Animation";
+    width: 193px;
+    height: 55px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    color: #ff0052;
+    font-size: 20px;
+    letter-spacing: 0;
+    box-shadow: 10px 5px 20px #101010;
+
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }   
+    100%{ 
+         transform: rotate(360deg);     
+        }
+    
+} 
